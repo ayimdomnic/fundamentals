@@ -26,7 +26,7 @@ Route::get('blog' function(){
 });
 
 Route::get('blog','BlogController@index');
-Route::get('blog/{slug}', 'BlogController@showPost')
+Route::get('blog/{slug}', 'BlogController@showPost');
 
 /*
 |--------------------------------------------------------------------------
