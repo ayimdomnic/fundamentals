@@ -14,9 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contact', function(){
-    return view('pages.contact');
-});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -30,4 +28,10 @@ Route::get('/contact', function(){
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
