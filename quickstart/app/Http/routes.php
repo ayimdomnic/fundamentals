@@ -17,6 +17,16 @@ Route::get('/', function () {
 Route::get('about', function(){
     return view('Pages.about');
 });
+Route::get('contact', function(){
+    return view('pages.contact');
+});
+
+Route::get('blog' function(){
+    return redirect('/blog')
+});
+
+Route::get('blog','BlogController@index');
+Route::get('blog/{slug}', 'BlogController@showPost')
 
 /*
 |--------------------------------------------------------------------------

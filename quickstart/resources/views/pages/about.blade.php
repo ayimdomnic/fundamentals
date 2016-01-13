@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!-- Section About -->                
 <section class="page-section-top-alt has-border" id="about">      
  <div class="container">
