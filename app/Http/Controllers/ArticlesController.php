@@ -14,7 +14,10 @@ class ArticlesController extends Controller {
 	 */
 	public function index()
 	{
-		return 'get all articles';
+		$articles = Articles::all();
+        
+        return view('articles.index', compact('articles'));
+        
 	}
 
 	/**
@@ -45,7 +48,8 @@ class ArticlesController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        $articles = Article::findorFail($id);
+		return view('articles.show',compact('articles'));
 	}
 
 	/**
